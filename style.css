@@ -1,0 +1,405 @@
+/* == GLOBAL STYLE == */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mada', sans-serif;
+    background: url('assets/bg.png') no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed; /* Optional for parallax feel */
+  }
+  
+/* == HEADER == */
+
+.edge-logo-navbar {
+    background-color: #5BE1E6;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 0.4s ease;
+  }
+  
+  .navbar-nav {
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    margin-right: auto;
+  }
+  
+.logo-img {
+    height: 60px;
+    padding-left: 1rem;
+    object-fit: contain;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+
+  .logo-img:hover {
+    animation: logo-shake 0.4s ease;
+  }
+  
+  @keyframes logo-shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .navbar-nav .nav-link {
+    position: relative;
+    font-weight: 600;
+    color: #0A0A0A;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+  }
+  
+  .nav-animated::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-animated:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .nav-animated:hover {
+    color: #ffffff;
+    background-color: #0A0A0A;
+    transform: translateY(-2px);
+  }
+  
+/* == HERO SECTION == */
+
+.hero-section {
+    padding: 11rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .hero-text {
+    max-width: 650px;
+    color: #0A0A0A;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text ul {
+    padding-left: 1.2rem;
+  }
+  
+  .hero-text li {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+  }
+
+/* === FOOTER === */
+.site-footer {
+    padding: 2rem 3rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-handle {
+    color: #0A0A0A;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 3rem;
+  }
+  
+  .footer-handle:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 3.8rem;
+  }
+  
+  .social-icon {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+  
+/* === ABOUT US === */
+
+.about-hero {
+    background-color: rgba(91, 225, 230, 0.1);
+    margin-top: 7rem;
+  }
+  
+  .hero-text,
+  .our-story p {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .our-chefs img {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .chef-card {
+    border: none;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .chef-card .card-body {
+      text-align: center;
+    }
+  }
+  
+  .our-chefs {
+    background-color: rgba(91, 225, 230, 0.05);
+  }
+  
+  .our-chefs h2 {
+    font-weight: 800;
+    color: #0A0A0A;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+.mission-values {
+    background: #5be1e6dc;
+}
+
+.floating-quote {
+  max-width: 450px;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  z-index: 10;
+  animation: floatIn 1s ease forwards;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* For mobile fallback */
+@media (max-width: 768px) {
+  .floating-quote {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  border-left: 2px solid #5BE1E6;
+}
+
+.timeline li::before {
+  content: "●";
+  position: absolute;
+  left: -0.5rem;
+  top: 0.25rem;
+  color: #5BE1E6;
+  font-size: 1rem;
+}
+
+.mission-values-section {
+  background-color: rgba(91, 225, 230, 0.08);
+}
+
+.mission-values-section .card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.mission-values-section .card-title {
+  font-size: 1.25rem;
+  color: #0A0A0A;
+}
+
+.mission-values-section .card-text {
+  font-size: 1rem;
+}
+
+
+  .chef-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;         /* Don’t crop */
+    object-position: top center; /* Focus on face */
+    background-color: white;
+    padding: 0.5rem;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .chef-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+  
+  .chef-card:hover .chef-img {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #0A0A0A;
+  }
+  
+  .chef-role {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #5BE1E6;
+  }
+  
+  .card-text {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+/* === BOOKING=== */
+
+.booking-section {
+  margin-top: 7rem;
+  background: linear-gradient(to right, #e6fafa 50%, #ffffff 50%);
+}
+
+.booking-section {
+  background-color: #e6fafa; /* Light aqua tint for contrast */
+  margin-top: 8rem; /* Ensure space from sticky navbar */
+}
+
+.booking-section .form-control,
+.booking-section .form-select {
+  border: 1px solid #0A0A0A;
+  transition: all 0.3s ease;
+}
+
+.booking-section .form-control:focus,
+.booking-section .form-select:focus {
+  border-color: #5BE1E6;
+  box-shadow: 0 0 0 0.25rem rgba(91, 225, 230, 0.25);
+}
+
+.booking-section .btn-dark {
+  background-color: #0A0A0A;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.booking-section .btn-dark:hover {
+  background-color: #5BE1E6;
+  color: #0A0A0A;
+  font-weight: 600;
+}
+
+.booking-section .card {
+  backdrop-filter: blur(5px);
+}
+
+.booking-section .card h2, 
+.booking-section .card h3, 
+.booking-section .card h4, 
+.booking-section .card h5 {
+  color: #0A0A0A;
+}
+
+.booking-section iframe {
+  border-radius: 0.75rem;
+}
+
+.map-container {
+  background: linear-gradient(145deg, #5BE1E6, #ffffff);
+  border-radius: 1.25rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.map-container:hover {
+  transform: translateY(-5px);
+}
+
+.map-frame {
+  box-shadow: 0 0 0 4px #5BE1E6;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.map-label {
+  font-size: 0.9rem;
+  z-index: 2;
+  border-bottom-right-radius: 1rem;
+}
+
+.map-container .btn {
+  z-index: 2;
+  font-size: 0.75rem;
+}
+
+/* === MENU === */
+
+#menu-tabs .btn.active {
+  background-color: #0A0A0A;
+  color: white;
+  border-color: #0A0A0A;
+  transition: 0.3s ease;
+}
+
+#menu-tabs .btn {
+  font-weight: 600;
+}

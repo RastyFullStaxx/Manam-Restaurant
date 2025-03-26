@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manam | Booking</title>
+
+    <!-- SRCs needed -->
+    <link href="https://fonts.googleapis.com/css2?family=Mada:wght@900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="assets/favicon.jpeg" type="image/png">
+
+</head> <!-- End of Head -->
+
+<body>
+    
+    <!-- HEADER SECTION -->
+    <nav id="main-navbar" class="navbar edge-logo-navbar px-4 py-3 navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand m-0" href="index.html">
+            <img src="assets/manam-logo.png" alt="Manam Logo" class="logo-img" />
+          </a>
+      
+          <!-- Toggler Button -->
+          <button class="navbar-toggler theme-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Collapsible Nav Links -->
+          <div class="collapse navbar-collapse" id="navbarLinks">
+            <ul class="navbar-nav ms-auto gap-lg-4 text-center">
+              <li class="nav-item"><a class="nav-link nav-animated" href="menu.html">MENU</a></li>
+              <li class="nav-item"><a class="nav-link nav-animated" href="about.html">WHO WE ARE</a></li>
+              <li class="nav-item"><a class="nav-link nav-animated" href="gallery.html">GALLERY</a></li>
+              <li class="nav-item"><a class="nav-link nav-animated" href="booking.html">BOOK A TABLE</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+  
+      <section class="booking-section py-5">
+        <div class="container">
+          <div class="row g-5 align-items-start">
+            
+              <!-- Above the form -->
+              <div class="d-flex justify-content-center gap-3 mb-4">
+                <span class="badge rounded-pill bg-dark text-light">Step 1</span>
+                <span class="badge rounded-pill bg-secondary text-light">Confirm Details</span>
+                <span class="badge rounded-pill bg-secondary text-light">Done</span>
+              </div>
+              
+              <!-- Toast Container -->
+              <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+                <div id="toastSuccess" class="toast align-items-center text-bg-success border-0 shadow" role="alert">
+                  <div class="d-flex">
+                    <div class="toast-body">
+                      🎉 Booking received! We’ll contact you shortly.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                  </div>
+                </div>
+              </div>
+
+
+            <!-- Reservation Form -->
+            <div class="col-lg-6">
+              <div class="card shadow rounded-4 border-0 p-4 bg-white bg-opacity-75" data-aos="fade-up" data-aos-delay="150">
+                <h2 class="fw-bold mb-4 text-center">Make a Reservation</h2>
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label fw-semibold">Full Name</label>
+                    <input type="text" class="form-control rounded-pill" id="name" placeholder="Juan Dela Cruz" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email</label>
+                    <input type="email" class="form-control rounded-pill" id="email" placeholder="your@email.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label fw-semibold">Phone Number</label>
+                    <input type="tel" class="form-control rounded-pill" id="phone" placeholder="+63 900 000 0000" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="datetime" class="form-label fw-semibold">Date & Time</label>
+                    <input type="datetime-local" class="form-control rounded-pill" id="datetime" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold">Guests</label>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge rounded-pill bg-info text-dark py-2 px-3 guest-select" data-value="1">Just Me</span>
+                      <span class="badge rounded-pill bg-info text-dark py-2 px-3 guest-select" data-value="2">+1</span>
+                      <span class="badge rounded-pill bg-info text-dark py-2 px-3 guest-select" data-value="4">Family of 4</span>
+                      <span class="badge rounded-pill bg-info text-dark py-2 px-3 guest-select" data-value="6">Group of 6</span>
+                    </div>
+                    <input type="number" id="guests" class="form-control rounded-pill mt-2" placeholder="Or enter manually">
+                  </div>                  
+                  <div class="mb-3">
+                    <label for="location" class="form-label fw-semibold">Select Location</label>
+                    <select class="form-select rounded-pill" id="location" required>
+                      <option selected disabled>Choose a branch</option>
+                      <option>Shangri-La Plaza</option>
+                      <option>Greenbelt</option>
+                      <option>SM Megamall</option>
+                      <option>Ayala Malls Manila Bay</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="requests" class="form-label fw-semibold">Special Requests</label>
+                    <textarea class="form-control rounded-3" rows="3" id="requests" placeholder="Let us know if you need anything..."></textarea>
+                  </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-dark rounded-pill fw-semibold">Book Now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+      
+            <!-- Contact Info + Map -->
+            <div class="col-lg-6">
+              <div class="d-flex flex-column gap-4">
+                
+                <!-- Contact Card -->
+                <div class="card shadow rounded-4 border-0 p-4 bg-white bg-opacity-75" data-aos="fade-up" data-aos-delay="150">
+                  <h3 class="fw-bold mb-3">Contact <span class="badge bg-dark text-light ms-1">Info</span></h3>
+                  <ul class="list-unstyled lh-lg">
+                    <li><span class="fw-bold text-dark">📍 Branches:</span> <span class="badge bg-info text-dark">11+</span></li>
+                    <li><span class="fw-bold text-dark">📞 Phone:</span> <a href="tel:+63288891020" class="text-decoration-none text-dark">(02) 8889 1020</a></li>
+                    <li><span class="fw-bold text-dark">📧 Email:</span> <a href="mailto:manamcf@gmail.com" class="text-decoration-none text-dark">manamcf@gmail.com</a></li>
+                    <li><span class="fw-bold text-dark">🕙 Hours:</span> 10:00 AM – 10:00 PM</li>
+                    <li><span class="fw-bold text-dark">📅 Days:</span> Monday – Saturday</li>
+                  </ul>
+                  <hr>
+                  <p class="mb-0 text-muted"><strong>Visit our most popular branch:</strong> <span class="text-dark">Shangri-La Plaza</span></p>
+                </div>
+      
+                <!-- Google Map Card -->
+                <div class="map-container card position-relative shadow-lg border-0 p-2 rounded-4 overflow-hidden" data-aos="fade-up" data-aos-delay="150">
+                  <div class="ratio ratio-16x9 rounded-4 border border-info border-3 map-frame" style="height: 461px;">
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.145559198588!2d121.05342101522368!3d14.582117689823105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c81de8e98c13%3A0xf547d8a702c35bfe!2sManam%20Comfort%20Filipino%20-%20Shangri-La%20Plaza!5e0!3m2!1sen!2sph!4v1711599100000"
+                      allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
+
+                  <div class="map-label bg-info text-dark position-absolute top-0 start-0 rounded-bottom px-3 py-1 fw-semibold shadow-sm">
+                    📍 Shangri-La Plaza
+                  </div>
+
+                  <a href="https://maps.app.goo.gl/FGL2RRcsfnMYqGb88" target="_blank"
+                    class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-3 rounded-pill shadow-sm">
+                    View on Google Maps
+                  </a>
+                </div>
+
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      
+    
+
+      
+    
+    
+  
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <a href="#" class="footer-handle">@MANAMPH</a>
+      <div class="social-icons mt-2">
+        <a href="#"><img src="assets/FB.png" alt="Facebook" class="social-icon" /></a>
+        <a href="#"><img src="assets/IG.png" alt="Instagram" class="social-icon" /></a>
+      </div>
+    </footer>
+      
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+</body> <!-- End of Body -->
+
+</html> <!-- End of HTML -->
