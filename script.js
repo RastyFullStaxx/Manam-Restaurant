@@ -126,6 +126,43 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Cart Toast
+document.addEventListener("DOMContentLoaded", function () {
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  const checkoutToastElement = document.getElementById("checkoutToast");
+
+  if (checkoutBtn && checkoutToastElement) {
+    const toast = new bootstrap.Toast(checkoutToastElement);
+    checkoutBtn.addEventListener("click", () => {
+      toast.show();
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  const checkoutToastEl = document.getElementById("checkoutToast");
+  const addItemToastEl = document.getElementById("addItemToast");
+  const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+  // ✅ Checkout Toast
+  if (checkoutBtn && checkoutToastEl) {
+    const checkoutToast = new bootstrap.Toast(checkoutToastEl);
+    checkoutBtn.addEventListener("click", () => {
+      checkoutToast.show();
+    });
+  }
+
+  // ✅ Add-to-Cart Toast
+  if (addItemToastEl && addToCartButtons.length > 0) {
+    const addToast = new bootstrap.Toast(addItemToastEl);
+    addToCartButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        addToast.show();
+      });
+    });
+  }
+});
 
 
 
