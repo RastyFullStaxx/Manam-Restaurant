@@ -231,6 +231,27 @@ body, html {
   }
 }
 
+/* For Gallery */
+
+section {
+  margin-bottom: 40px; 
+  padding-top: 40px; 
+}
+
+.section-divider {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, #1a1a1a, #333, #1a1a1a);
+  margin: 50px auto;
+  width: 60%;
+  opacity: 0.9;
+}
+
+h2 {
+  margin-bottom: 30px; 
+}
+
+
 /* For mobile fallback */
 @media (max-width: 768px) {
   .floating-quote {
