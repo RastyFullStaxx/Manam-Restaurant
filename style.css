@@ -8,6 +8,11 @@ body, html {
     background-size: cover;
     background-attachment: fixed; /* Optional for parallax feel */
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
   
 /* == HEADER == */
 
@@ -468,3 +473,4 @@ h2 {
     transform: translateY(0);
   }
 }
+

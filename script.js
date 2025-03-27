@@ -92,29 +92,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // MENU TABS LOGIC
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("✅ JavaScript loaded and DOM ready");
-
+document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll('#menu-tabs button');
   const sections = document.querySelectorAll('.menu-category-section');
-
-  console.log("Found tabs:", tabs.length);
-  console.log("Found sections:", sections.length);
+  let activeTab = null;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const targetId = tab.dataset.target;
-      console.log("🟢 Tab clicked:", targetId);
+      const target = tab.getAttribute('data-target');
 
-      // Toggle active class
-      tabs.forEach(btn => btn.classList.remove('active'));
+      // If the same tab is clicked again, reset
+      if (activeTab === tab) {
+        // Remove filter
+        sections.forEach(sec => sec.classList.remove('d-none'));
+        tabs.forEach(t => t.classList.remove('active'));
+        activeTab = null;
+        return;
+      }
+
+      // Otherwise, activate selected tab and show only its section
+      activeTab = tab;
+      tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
-      // Toggle sections
       sections.forEach(section => {
-        if (section.id === targetId) {
+        if (section.id === target) {
           section.classList.remove('d-none');
-          console.log(`✅ Showing section: ${section.id}`);
         } else {
           section.classList.add('d-none');
         }
@@ -122,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 
 
