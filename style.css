@@ -231,7 +231,11 @@ body, html {
   }
 }
 
-/* For Gallery */
+.mission-values-section {
+  background-color: #5BE1E6;
+}
+
+/* IMAGE GALLERY*/
 
 section {
   margin-bottom: 40px; 
@@ -251,8 +255,6 @@ h2 {
   margin-bottom: 30px; 
 }
 
-
-/* For mobile fallback */
 @media (max-width: 768px) {
   .floating-quote {
     position: static;
@@ -423,4 +425,46 @@ h2 {
 
 #menu-tabs .btn {
   font-weight: 600;
+}
+
+.menu-section {
+  margin-top: 7rem;
+}
+
+.menu-wrapper {
+  background-color: rgba(255, 255, 255, 0.24); /* Themed turquoise with opacity */
+  backdrop-filter: blur(5px);                /* Optional: adds softness */
+  border: 2px solid #0A0A0A;  /* Optional: soft border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.quantity-input {
+  width: 60px;
+  text-align: center;
+  border-radius: 8px;
+}
+.card-title {
+  color: #0A0A0A;
+}
+.card-body {
+  font-size: 0.95rem;
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.animated-category {
+  animation: fadeSlideIn 0.5s ease;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

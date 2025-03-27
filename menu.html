@@ -47,10 +47,12 @@
   
     <!-- MENU SECTION -->
     <section class="menu-section py-5">
-        <div class="container">
+      <div class="container">
+        <div class="menu-wrapper text-center text-lg-start px-4 py-5 rounded-4 shadow-lg">
+
       
           <!-- Menu Title -->
-          <h1 class="text-center fw-bold display-5 mb-4">Menu</h1>
+          <h1 class="fw-bold  mb-5 px-4 py-3 text-white bg-dark bg-opacity-75 rounded-4 shadow-lg display-2 mb-4 text-center">Menu</h1>
       
           <!-- Category Tabs -->
           <div class="d-flex justify-content-center flex-wrap gap-3 mb-5" id="menu-tabs">
@@ -63,26 +65,442 @@
       
           <!-- Category Sections (initially only one shown) -->
           <div id="pica-pica" class="menu-category-section">
-            <h2 class="fw-bold text-dark mb-3">Pica-Pica</h2>
-            <!-- Cards will go here later -->
+            <h2 class="mb-4">
+              <span class="animated-category ... badge bg-dark text-white fs-5 px-4 py-2 rounded-pill shadow">Pica-Pica</span>
+            </h2>
+            
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/crispy-lumpia-ubod.png" class="card-img-top rounded-top-4" alt="Crispy Squid Rings">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Crispy Squid Rings</h5>
+                    <p class="card-text text-muted">Palm heart, cabbage, carrots, onions, garlic, and Baguio Beans rolled up in a crispy lumpia wrapper. Can be dipped in a sweet ubod or vinegar sawsawan.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱130</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/chicharon-bulaklak.png" class="card-img-top rounded-top-4" alt="Lumpiang Shanghai">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Chicharon Bulaklak with Sinigang Floss</h5>
+                    <p class="card-text text-muted">Crispy, golden-fried ruffled fat served with a unique twist of light, tangy sinigang-flavored floss that adds a refreshing contrast to every crunchy bite. A bold and flavorful take on a classic pulutan favorite.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">230</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/tokwat-baboy.png" class="card-img-top rounded-top-4" alt="Sizzling Tofu">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Tokwa’t Baboy</h5>
+                    <p class="card-text text-muted">Crispy fried tofu and tender pork, tossed in a tangy soy-vinegar sauce with onions. Perfect as a starter or a flavorful companion to savory dishes.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱160</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/wings.png" class="card-img-top rounded-top-4" alt="Sizzling Tofu">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Caramelized Patis Wings</h5>
+                    <p class="card-text text-muted">Crispy chicken wings glazed in a rich, sweet-savory patis caramel, balancing deep umami with a hint of sweetness.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱285</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
       
           <div id="paboritos" class="menu-category-section d-none">
-            <h2 class="fw-bold text-dark mb-3">Paboritos</h2>
+            <h2 class="mb-4">
+              <span class="animated-category ... badge bg-dark text-white fs-5 px-4 py-2 rounded-pill shadow">Paboritos</span>
+            </h2>
+
+            <div class="row g-4">
+
+              <!-- House Crispy Sisig -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/sisig.png" class="card-img-top rounded-top-4" alt="House Crispy Sisig">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">House Crispy Sisig</h5>
+                    <p class="card-text text-muted">Chopped pork jowl and cheek, doused in our secret sisig sauce, topped with crispy garlic flakes for an extra layer of flavor and crunch.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱215</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Sinigang na Beef Short Rib & Watermelon -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/watermelon-sinigang.png" class="card-img-top rounded-top-4" alt="Sinigang na Beef Short Rib & Watermelon">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Sinigang na Beef Short Rib & Watermelon</h5>
+                    <p class="card-text text-muted">An original family recipe, featuring tender beef short ribs in a rich, tangy sinigang broth, balanced with the subtle sweetness of fresh watermelon.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱315</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Crispy Pancit Palabok -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/pancit-palabok.png" class="card-img-top rounded-top-4" alt="Crispy Pancit Palabok">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Crispy Pancit Palabok</h5>
+                    <p class="card-text text-muted">Crunchy glass noodles topped with chicharon, garlic, shrimp, and squid, served with rich shrimp sauce poured tableside for the perfect finish.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱265</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Kare-Kare with Oxtail -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/kare-kare.png" class="card-img-top rounded-top-4" alt="Kare-Kare with Oxtail">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Kare-Kare with Oxtail</h5>
+                    <p class="card-text text-muted">Slow-braised oxtail, tripe, and fresh vegetables in a rich, velvety peanut stew, served with our house-made bagoong for the perfect balance of flavor.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱380</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Sizzling Corned Beef Belly Kansi -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/kansi.png" class="card-img-top rounded-top-4" alt="Sizzling Corned Beef Belly Kansi">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Sizzling Corned Beef Belly Kansi</h5>
+                    <p class="card-text text-muted">A bold take on the Ilonggo classic, with tender corned beef belly simmered in tangy kansi broth and served sizzling hot.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱345</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Gising-Gising -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/gising-gising.png" class="card-img-top rounded-top-4" alt="Gising-Gising">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Gising-Gising</h5>
+                    <p class="card-text text-muted">Sautéed sigarilyas and kangkong in creamy coconut sauce, mixed with pork, chilis, and bagoong for a rich, spicy, and savory kick.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱170</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
       
           <div id="kanin" class="menu-category-section d-none">
-            <h2 class="fw-bold text-dark mb-3">Kanin</h2>
+            <h2 class="mb-4">
+              <span class="animated-category ... badge bg-dark text-white fs-5 px-4 py-2 rounded-pill shadow">Kanin</span>
+            </h2>
+            <div class="row g-4">
+
+              <!-- White Rice -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/white-rice.png" class="card-img-top rounded-top-4" alt="White Rice">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">White Rice</h5>
+                    <p class="card-text text-muted">Plain steamed rice, good for 2–3 people.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱105</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bagoong Rice -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/bagoong-rice.png" class="card-img-top rounded-top-4" alt="Bagoong Rice">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Bagoong Rice</h5>
+                    <p class="card-text text-muted">Fried rice with shrimp paste, good for 2–3 people.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱150</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Garlic Rice -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/garlic-rice.png" class="card-img-top rounded-top-4" alt="Garlic Rice">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Garlic Rice</h5>
+                    <p class="card-text text-muted">Fried rice with toasted garlic, good for 2–3 people.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱115</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tinapa Rice -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/tinapa-rice.png" class="card-img-top rounded-top-4" alt="Tinapa Rice">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Tinapa Rice</h5>
+                    <p class="card-text text-muted">Fried rice with smoked fish, good for 2–3 people.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱150</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
       
           <div id="kakanin" class="menu-category-section d-none">
-            <h2 class="fw-bold text-dark mb-3">Kakanin at Minatamis</h2>
+            <h2 class="mb-4">
+              <span class="animated-category ... badge bg-dark text-white fs-5 px-4 py-2 rounded-pill shadow">Kakanin at Minatamis</span>
+            </h2>
+            <div class="row g-4">
+
+              <!-- Bibingkang Galapong with Salted Egg -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/bibingka.png" class="card-img-top rounded-top-4" alt="Bibingkang Galapong with Salted Egg">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Bibingkang Galapong with Salted Egg</h5>
+                    <p class="card-text text-muted">Soft and chewy rice cake made from galapong, baked to perfection and topped with salted egg.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱160</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Puto Bumbong with Muscovado Butter -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/puto-bumbong.png" class="card-img-top rounded-top-4" alt="Puto Bumbong with Muscovado Butter">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Puto Bumbong with Muscovado Butter</h5>
+                    <p class="card-text text-muted">Steamed purple rice cakes served with muscovado butter for a rich, caramelized sweetness.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱145</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Calamansi Tart -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/calamansi-tart.png" class="card-img-top rounded-top-4" alt="Calamansi Tart">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Calamansi Tart</h5>
+                    <p class="card-text text-muted">A zesty tart with smooth calamansi custard, perfectly balanced between sweet and tangy.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱180</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buko Pie -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-0 rounded-4">
+                  <img src="assets/buko-pie.png" class="card-img-top rounded-top-4" alt="Buko Pie">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Buko Pie</h5>
+                    <p class="card-text text-muted">Sweet and creamy coconut filling topped with a buttery crumble, served with Manam’s signature coconut sauce.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <span class="badge bg-dark fs-6">₱315</span>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                        <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
           </div>
       
           <div id="pampalamigs" class="menu-category-section d-none">
-            <h2 class="fw-bold text-dark mb-3">Pampalamigs</h2>
+            <h2 class="mb-4">
+              <span class="animated-category ... badge bg-dark text-white fs-5 px-4 py-2 rounded-pill shadow">Pampalamigs</span>
+            </h2>
+              <div class="row g-4">
+
+                <!-- Ube + Sago -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card h-100 shadow border-0 rounded-4">
+                    <img src="assets/ube-sago.png" class="card-img-top rounded-top-4" alt="Ube + Sago">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Ube + Sago</h5>
+                      <p class="card-text text-muted">Manam’s famous ube sago shake, rich and creamy.</p>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="badge bg-dark fs-6">₱190</span>
+                        <div class="d-flex align-items-center gap-2">
+                          <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                          <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mango + Pomelo + Sago -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card h-100 shadow border-0 rounded-4">
+                    <img src="assets/mango-pomelo-sago.png" class="card-img-top rounded-top-4" alt="Mango + Pomelo + Sago">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Mango + Pomelo + Sago</h5>
+                      <p class="card-text text-muted">A tropical mix of sweet mango, juicy pomelo with sago.</p>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="badge bg-dark fs-6">₱205</span>
+                        <div class="d-flex align-items-center gap-2">
+                          <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                          <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Camias + Lemongrass -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card h-100 shadow border-0 rounded-4">
+                    <img src="assets/camias-lemongrass.png" class="card-img-top rounded-top-4" alt="Camias + Lemongrass">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Camias + Lemongrass</h5>
+                      <p class="card-text text-muted">Refreshing blend of tangy camias and aromatic lemongrass.</p>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="badge bg-dark fs-6">₱165</span>
+                        <div class="d-flex align-items-center gap-2">
+                          <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                          <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Guinumis -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card h-100 shadow border-0 rounded-4">
+                    <img src="assets/guinumis.png" class="card-img-top rounded-top-4" alt="Guinumis">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">Guinumis</h5>
+                      <p class="card-text text-muted">A chilled coconut and panutsa drink with sago and pinipig.</p>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="badge bg-dark fs-6">₱180</span>
+                        <div class="d-flex align-items-center gap-2">
+                          <input type="number" min="1" value="1" class="form-control form-control-sm quantity-input">
+                          <button class="btn btn-info btn-sm rounded-pill fw-semibold">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
-      
+
+            
+          </div>
         </div>
 
 
@@ -92,6 +510,7 @@
             🛒 Checkout
           </button>
         </div>
+        
       </section>
       
       

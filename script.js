@@ -34,12 +34,19 @@ document.querySelectorAll('.guest-select').forEach(badge => {
 });
 
 // Replace alert in form submit
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const toast = new bootstrap.Toast(document.getElementById("toastSuccess"));
-  toast.show();
-  this.reset();
-});
+const form = document.querySelector("form");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const toast = new bootstrap.Toast(document.getElementById("toastSuccess"));
+    toast.show();
+
+    this.reset();
+  });
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const phrases = [
@@ -50,6 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const typeTarget = document.getElementById("typewriter");
+
+  if (!typeTarget) return; // Exit if the typewriter element is not present
+
   let phraseIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -80,26 +90,31 @@ document.addEventListener("DOMContentLoaded", () => {
   typeLoop();
 });
 
+
 // MENU TABS LOGIC
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Menu logic running ✅");
+  console.log("✅ JavaScript loaded and DOM ready");
 
   const tabs = document.querySelectorAll('#menu-tabs button');
   const sections = document.querySelectorAll('.menu-category-section');
 
+  console.log("Found tabs:", tabs.length);
+  console.log("Found sections:", sections.length);
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      console.log("Tab clicked:", tab.dataset.target);
+      const targetId = tab.dataset.target;
+      console.log("🟢 Tab clicked:", targetId);
 
       // Toggle active class
       tabs.forEach(btn => btn.classList.remove('active'));
       tab.classList.add('active');
 
-      // Show target section only
-      const targetId = tab.getAttribute('data-target');
+      // Toggle sections
       sections.forEach(section => {
         if (section.id === targetId) {
           section.classList.remove('d-none');
+          console.log(`✅ Showing section: ${section.id}`);
         } else {
           section.classList.add('d-none');
         }
@@ -107,6 +122,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+
 
 
 
