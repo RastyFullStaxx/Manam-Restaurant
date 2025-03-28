@@ -135,6 +135,7 @@ body, html {
     gap: 2rem;
     min-height: 100vh;
     position: relative;
+    margin-top: 1rem;
   }
   
   .hero-text {
