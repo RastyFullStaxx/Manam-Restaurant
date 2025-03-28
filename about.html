@@ -17,7 +17,7 @@
 
 </head> <!-- End of Head -->
 
-<body>
+<body style="background: url(assets/bg2.png);">
     
     <!-- HEADER SECTION -->
     <nav id="main-navbar" class="navbar edge-logo-navbar px-4 py-3 navbar-expand-lg">
@@ -106,7 +106,7 @@
 
             <!-- Value 1 -->
             <div class="col-md-4">
-              <div class="card border-0 shadow-sm h-100 rounded-4" data-aos="fade-up" data-aos-delay="50" style="background-color: #d5f4f5;">
+              <div class="card shadow-sm h-100 rounded-4" data-aos="fade-up" data-aos-delay="50" style="background-color: #d5f4f5;">
                 <div class="card-body p-4">
                   <h5 class="card-title fw-bold mb-3 text-info-emphasis">
                     ❤️ Hospitality
@@ -120,7 +120,7 @@
 
             <!-- Value 2 -->
             <div class="col-md-4">
-              <div class="card border-0 shadow-sm h-100 rounded-4" data-aos="fade-up" data-aos-delay="150" style="background-color: #d5f4f5;">
+              <div class="card shadow-sm h-100 rounded-4" data-aos="fade-up" data-aos-delay="150" style="background-color: #d5f4f5;">
                 <div class="card-body p-4">
                   <h5 class="card-title fw-bold mb-3 text-info-emphasis">
                     🥘 Innovation
@@ -134,7 +134,7 @@
 
             <!-- Value 3 -->
             <div class="col-md-4">
-              <div class="card border-0 shadow-sm h-100 rounded-4" data-aos="fade-up" data-aos-delay="250" style="background-color: #d5f4f5;">
+              <div class="card shadow-sm h-100 rounded-4" data-aos="fade-up" data-aos-delay="250" style="background-color: #d5f4f5;">
                 <div class="card-body p-4">
                   <h5 class="card-title fw-bold mb-3 text-info-emphasis">
                     🌿 Integrity
@@ -152,65 +152,77 @@
       </div>
     </section>
 
+    <h2 class="text-center fw-bold display-5 mb-4 text-primary-emphasis w-100">
+      <span class="d-block px-4 py-3 bg-white text-primary-emphasis border border-info-subtle rounded-0 shadow-sm">
+        Meet Our Chefs
+      </span>
+    </h2>
 
-
-    
     <!-- OUR CHEFS -->
     <section class="our-chefs py-5">
-        <div class="container text-center">
-          <h2 class="fw-bold display-5 mb-4 text-primary-emphasis position-relative d-inline-block">
-            <span class="px-4 py-2 rounded-4 shadow-sm bg-white text-dark-emphasis border border-info-subtle">
-              Meet Our Chefs
-            </span>
-          </h2>          
+      <div class="container text-center">
+        
         <div class="row g-4">
-            <!-- Chef 1 -->
-            <div class="col-md-6 col-lg-3">
+
+          <!-- Chef Card Template -->
+          <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow chef-card" data-aos="fade-up" data-aos-delay="150">
-                <img src="assets/chef-rasty.png" class="card-img-top" alt="Chef Rasty">
-                <div class="card-body">
+              <div class="chef-img-container" style="height: 350px; overflow: hidden; border-bottom: 1px solid #ddd;">
+                <img src="assets/chef-rasty.png" alt="Chef Rasty" class="w-100 h-100" style="object-fit: cover; object-position: top;">
+              </div>
+              <div class="card-body">
                 <h5 class="card-title fw-bold text-primary-emphasis">Rasty Espartero</h5>
                 <p class="text-muted mb-1">Head Chef</p>
                 <p class="card-text">Visionary behind every flavor twist. Chef Rasty blends tradition with innovation to lead our culinary team with heart and bold creativity.</p>
-                </div>
+              </div>
             </div>
-            </div>
-            <!-- Chef 2 -->
-            <div class="col-md-6 col-lg-3">
+          </div>
+
+          <!-- Repeat for the other chefs -->
+
+          <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow chef-card" data-aos="fade-up" data-aos-delay="150">
-                <img src="assets/chef-jessica.png" class="card-img-top" alt="Chef Jessica">
-                <div class="card-body">
+              <div class="chef-img-container" style="height: 350px; overflow: hidden; border-bottom: 1px solid #ddd;">
+                <img src="assets/chef-jessica.png" alt="Chef Jessica" class="w-100 h-100" style="object-fit: cover; object-position: top;">
+              </div>
+              <div class="card-body">
                 <h5 class="card-title fw-bold text-primary-emphasis">Jessica Manio</h5>
                 <p class="text-muted mb-1">Chef</p>
                 <p class="card-text">The queen of comfort dishes. Jessica brings warmth and depth to every serving — each bite a hug from home.</p>
-                </div>
+              </div>
             </div>
-            </div>
-            <!-- Chef 3 -->
-            <div class="col-md-6 col-lg-3">
+          </div>
+
+          <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow chef-card" data-aos="fade-up" data-aos-delay="150">
-                <img src="assets/chef-yesa.png" class="card-img-top" alt="Chef Yesa">
-                <div class="card-body">
+              <div class="chef-img-container" style="height: 350px; overflow: hidden; border-bottom: 1px solid #ddd;">
+                <img src="assets/chef-yesa.png" alt="Chef Yesa" class="w-100 h-100" style="object-fit: cover; object-position: top;">
+              </div>
+              <div class="card-body">
                 <h5 class="card-title fw-bold text-primary-emphasis">Yesa Placente</h5>
                 <p class="text-muted mb-1">Chef</p>
                 <p class="card-text">Creative and detail-driven, Yesa elevates Filipino dishes with finesse and flair, ensuring each plate is a masterpiece.</p>
-                </div>
+              </div>
             </div>
-            </div>
-            <!-- Chef 4 -->
-            <div class="col-md-6 col-lg-3">
+          </div>
+
+          <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow chef-card" data-aos="fade-up" data-aos-delay="150">
-                <img src="assets/chef-patrick.png" class="card-img-top" alt="Chef Patrick">
-                <div class="card-body">
+              <div class="chef-img-container" style="height: 350px; overflow: hidden; border-bottom: 1px solid #ddd;">
+                <img src="assets/chef-patrick.png" alt="Chef Patrick" class="w-100 h-100" style="object-fit: cover; object-position: top;">
+              </div>
+              <div class="card-body">
                 <h5 class="card-title fw-bold text-primary-emphasis">Patrick Sanoy</h5>
                 <p class="text-muted mb-1">Chef</p>
                 <p class="card-text">Known for his bold takes and mastery of grilling, Patrick brings fire, flair, and flavor to every dish.</p>
-                </div>
+              </div>
             </div>
-            </div>
+          </div>
+
         </div>
-        </div>
+      </div>
     </section>
+
 
     <div class="container position-relative my-5" data-aos="fade-left">
       <div class="floating-quote card shadow-lg p-4 bg-white bg-opacity-75 border-start border-info border-4 rounded-end">
